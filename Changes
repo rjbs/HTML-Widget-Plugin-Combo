@@ -1,0 +1,7 @@
+Changelog for HTML-Widget-Plugin-Combo
+
+0.002    2006-12-14
+         fix bug: unknown options did not result in start with input
+
+0.001    2006-12-14
+         first release
