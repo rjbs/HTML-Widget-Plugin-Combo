@@ -11,13 +11,13 @@ HTML::Widget::Plugin::Combo - a JavaScript combo box widget
 
 =head1 VERSION
 
-version 0.001_01
+version 0.002
 
  $Id$
 
 =cut
 
-our $VERSION = '0.001_01';
+our $VERSION = '0.002';
 
 use Data::JavaScript::Anon;
 
