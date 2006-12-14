@@ -23,6 +23,19 @@ use Data::JavaScript::Anon;
 
 sub provided_widgets { qw(combo) }
 
+=head2 combo
+
+This widget produces a combo box.  It's a select box with an option for "other"
+that causes it to be replaced with a text input box.
+
+Valid arguments are:
+
+  id      - required
+  options - as per select widget
+  value   - as per select widget
+
+=cut
+
 sub combo {
   my ($self, $factory, $arg) = @_;
   $arg->{attr}{name} ||= $arg->{attr}{id};
@@ -66,6 +79,12 @@ sub combo {
   ;
 }
 
+=head2 per_combo_js
+
+This method returns JavaScript to be run after each combo box is defined.
+
+=cut
+
 # always included; hides the hidden startup field
 sub per_combo_js {
   my ($self, $factory, $arg) = @_;
@@ -85,6 +104,12 @@ sub per_combo_js {
   </script>
 END_JAVASCRIPT
 }
+
+=head2 per_page_js
+
+This method returns JavaScript to be run once per page.
+
+=cut
 
 # provides the main routines, object
 sub per_page_js {
@@ -154,5 +179,17 @@ function combo_toggle(element_name) {
   </script>
 END_JAVASCRIPT
 }
+
+=head2 AUTHOR
+
+This code was written by Ricardo SIGNES.  Its development in 2006 was sponsored
+by Listbox.
+
+=head2 COPYRIGHT
+
+This code is copyright (c) 2006, Ricardo SIGNES.  It is free software,
+available under the same terms as perl itself.
+
+=cut
 
 1;
