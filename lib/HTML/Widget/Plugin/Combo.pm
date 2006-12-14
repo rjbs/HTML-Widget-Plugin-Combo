@@ -17,6 +17,8 @@ version 0.001
 
 =cut
 
+our $VERSION = '0.001';
+
 use Data::JavaScript::Anon;
 
 sub provided_widgets { qw(combo) }
