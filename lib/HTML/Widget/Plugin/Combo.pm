@@ -11,13 +11,13 @@ HTML::Widget::Plugin::Combo - a JavaScript combo box widget
 
 =head1 VERSION
 
-version 0.001
+version 0.001_01
 
  $Id$
 
 =cut
 
-our $VERSION = '0.001';
+our $VERSION = '0.001_01';
 
 use Data::JavaScript::Anon;
 
@@ -47,7 +47,6 @@ sub combo {
     id      => "$arg->{attr}{id}_select",
     name    => $arg->{attr}{id},
     options => $arg->{options},
-    value   => $arg->{value},
     attr    => { onChange => 'combo_maybetoggle_select(this)' },
   );
 
