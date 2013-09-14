@@ -1,23 +1,8 @@
-
 use strict;
 use warnings;
-
 package HTML::Widget::Plugin::Combo;
-use base qw(HTML::Widget::Plugin);
-
-=head1 NAME
-
-HTML::Widget::Plugin::Combo - a JavaScript combo box widget
-
-=head1 VERSION
-
-version 0.002
-
- $Id$
-
-=cut
-
-our $VERSION = '0.002';
+use parent qw(HTML::Widget::Plugin);
+# ABSTRACT: a JavaScript combo box widget
 
 use Data::JavaScript::Anon;
 
@@ -178,17 +163,5 @@ function combo_toggle(element_name) {
   </script>
 END_JAVASCRIPT
 }
-
-=head2 AUTHOR
-
-This code was written by Ricardo SIGNES.  Its development in 2006 was sponsored
-by Listbox.
-
-=head2 COPYRIGHT
-
-This code is copyright (c) 2006, Ricardo SIGNES.  It is free software,
-available under the same terms as perl itself.
-
-=cut
 
 1;
